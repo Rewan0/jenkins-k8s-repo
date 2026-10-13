@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Getting Repo files') {
             steps {
-                git branch: "main-k8s", credentialsId: 'dde', url: "${REPO_URL}"
+                git branch: "main", credentialsId: 'dde', url: "${REPO_URL}"
             }
         }
 
