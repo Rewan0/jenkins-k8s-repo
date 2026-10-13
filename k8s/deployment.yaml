@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: new-app-nti
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: new-app-nti
+  template:
+    metadata:
+      labels:
+        app: new-app-nti
+    spec:
+      containers:
+        - name: new-app-nti
+          image: IMAGE_PLACEHOLDER
+          ports:
+            - containerPort: 5000
