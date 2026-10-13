@@ -3,13 +3,13 @@ pipeline {
 
     environment {
         APP_NAME = 'new-app-nti'
-        REPO_URL = "https://github.com/<USERNAME>/<REPO>.git"
+        REPO_URL = "https://github.com/Rewan0/jenkins-k8s-repo.git"
     }
 
     stages {
         stage('Getting Repo files') {
             steps {
-                git branch: "main-k8s", credentialsId: '<GITHUB-CRED-ID>', url: "${REPO_URL}"
+                git branch: "main-k8s", credentialsId: 'dde', url: "${REPO_URL}"
             }
         }
 
